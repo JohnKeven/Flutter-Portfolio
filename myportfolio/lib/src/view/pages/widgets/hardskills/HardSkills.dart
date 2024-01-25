@@ -62,7 +62,6 @@ Widget buildHardSkillsDesktopTablet(context) {
                       color: AppColors().brightBackground,
                       child: Container(
                           decoration: BoxDecoration(
-                              color: AppColors().brightBackground,
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(color: AppColors().brightBackground)),
                           alignment: Alignment.center,
@@ -155,7 +154,7 @@ Widget buildHardSkillsMobile(context) {
                   child: Column(
                     children: [
                       Card(
-                        color: AppColors().darkBackground,
+                        color: AppColors().brightBackground,
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
@@ -170,10 +169,9 @@ Widget buildHardSkillsMobile(context) {
                             )),
                       ),
                       Card(
-                        color: AppColors().darkBackground,
+                        color: AppColors().brightBackground,
                         child: Container(
                             decoration: BoxDecoration(
-                                color: AppColors().darkBackground,
                                 borderRadius: BorderRadius.circular(8),
                                 border: Border.all(color: AppColors().brightBackground)),
                             alignment: Alignment.center,
@@ -186,7 +184,7 @@ Widget buildHardSkillsMobile(context) {
                             )),
                       ),
                       Card(
-                        color: AppColors().darkBackground,
+                        color: AppColors().brightBackground,
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
@@ -201,7 +199,7 @@ Widget buildHardSkillsMobile(context) {
                             )),
                       ),
                       Card(
-                        color: AppColors().darkBackground,
+                        color: AppColors().brightBackground,
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
@@ -216,7 +214,7 @@ Widget buildHardSkillsMobile(context) {
                             )),
                       ),
                       Card(
-                        color: AppColors().darkBackground,
+                        color: AppColors().brightBackground,
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
