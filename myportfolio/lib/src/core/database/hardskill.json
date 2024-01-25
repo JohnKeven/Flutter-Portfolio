@@ -1,0 +1,24 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "Nome": "Spring Framework"
+    },
+    {
+      "id": 2,
+      "Nome": "SQL Server"
+    },
+    {
+      "id": 3,
+      "Nome": "Flutter"
+    },
+    {
+      "id": 4,
+      "Nome": "Firebase"
+    },
+    {
+      "id": 5,
+      "Nome": "Node.js"
+    }
+  ]
+}

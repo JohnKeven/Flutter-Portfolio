@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "projectId": 1,
+      "projectName": "ItSolved Landing Page",
+      "projectDescription": "Landing Page desenvolvida para a empresa ItSolved, seguindo os moldes de sua antiga página mas fazendo uso do Flutter Web.",
+      "projectVideoUrl": "lib/videos/Itsolved.mp4"
+    },
+    {
+      "projectId": 2,
+      "projectName": "SimplesGest",
+      "projectDescription": "ERP Web para gerenciar pequenos e medios comércios, com funcionalidades para controle de estoque, realização de vendas (caixa), controle de acesso dos usuários de acordo com o tipo (funcionário, gerente, etc.) e Dashboard para Business Intelligence.",
+      "projectVideoUrl": "lib/videos/SimplesGest.mp4"
+    }
+  ]
+}
