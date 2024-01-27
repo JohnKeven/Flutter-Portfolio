@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:myportfolio/src/controllers/ProjectController.dart';
 import 'package:myportfolio/src/model/Project.dart';
@@ -42,9 +44,8 @@ class _ProjectsState extends State<Projects> {
 
 Widget buildProjectsDesktopTablet(context, projectDados){
   return Container(
-    padding: const EdgeInsets.only(top: 12),
+    padding: const EdgeInsets.all(18),
     color: AppColors().darkBackground,
-    height: MediaQuery.of(context).size.height * .9,
     width: double.infinity,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -59,58 +60,59 @@ Widget buildProjectsDesktopTablet(context, projectDados){
                 '../Projetos/Comercializados',
                 style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic, color: AppColors().kSecondColor),
               ),
-              const Divider(),
-              Expanded(
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  reverse: false,
-                  itemCount: projectDados.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return
-                      Container(
-                        color: AppColors().brightBackground,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: Card(
-                                child: SizedBox(
-                                  height: 300,
-                                  width: 300,
-                                  child: ChewieListItem(
-                                    videoPlayerController: VideoPlayerController.asset(
-                                      projectDados[index].projectVideoUrl,
-                                    ),
-                                    looping: false,
-                                  ),
+              const Divider(
+                color: Colors.transparent,
+              ),
+              ListView.separated(
+                shrinkWrap: true,
+                reverse: false,
+                itemCount: projectDados.length,
+                itemBuilder: (BuildContext context, int index) {
+                  var videoController = VideoPlayerController.asset(
+                    projectDados[index].projectVideoUrl,
+                  );
+                  return
+                    Container(
+                      color: AppColors().brightBackground,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Card(
+                              child: SizedBox(
+                                height: 300,
+                                width: 300,
+                                child: ChewieListItem(
+                                  videoPlayerController: videoController,
+                                  looping: false,
                                 ),
                               ),
                             ),
-                            Container(
-                              width: MediaQuery.of(context).size.width / 2.4,
-                              alignment: Alignment.topCenter,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(projectDados[index].projectName,textAlign: TextAlign.justify,
-                                    style: TextStyle(fontSize: 18, color: AppColors().kSecondColor, fontWeight: FontWeight.bold),),
-                                  const Divider(color: Colors.transparent,),
-                                  Text(projectDados[index].projectDescription,
-                                    textAlign: TextAlign.justify,
-                                    style: TextStyle(fontSize: 16, color: AppColors().kSecondColor),
-                                  ),
-                                  const Divider(color: Colors.transparent,),
-                                ],
-                              ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 2.4,
+                            alignment: Alignment.topCenter,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Text(projectDados[index].projectName,textAlign: TextAlign.justify,
+                                  style: TextStyle(fontSize: 18, color: AppColors().kSecondColor, fontWeight: FontWeight.bold),),
+                                const Divider(color: Colors.transparent,),
+                                Text(projectDados[index].projectDescription,
+                                  textAlign: TextAlign.justify,
+                                  style: TextStyle(fontSize: 16, color: AppColors().kSecondColor),
+                                ),
+                                const Divider(color: Colors.transparent,),
+                              ],
                             ),
-                          ],
-                        ),
-                      );
-                  }, separatorBuilder: (BuildContext context, int index) {
-                  return const Divider();
-                },),
-              ),
+                          ),
+                        ],
+                      ),
+                    );
+                }, separatorBuilder: (BuildContext context, int index) {
+                return const Divider();
+              },),
             ],
           ),
         ),
@@ -121,9 +123,8 @@ Widget buildProjectsDesktopTablet(context, projectDados){
 
 Widget buildProjectsMobile(context, projectDados){
   return Container(
-    padding: const EdgeInsets.only(top: 12),
+    padding: const EdgeInsets.all(18),
     color: AppColors().darkBackground,
-    height: MediaQuery.of(context).size.height * .9,
     width: double.infinity,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -138,61 +139,61 @@ Widget buildProjectsMobile(context, projectDados){
                 '../Projetos/Comercializados',
                 style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic, color: AppColors().kSecondColor),
               ),
-              const Divider(),
-              Expanded(
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  itemCount: projectDados.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return
-                      Container(
-                        color: AppColors().brightBackground,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: Card(
-                                child: SizedBox(
-                                  height: 300,
-                                  width: 300,
-                                  child: ChewieListItem(
-                                    videoPlayerController: VideoPlayerController.asset(
-                                      projectDados[index].projectVideoUrl,
-                                    ),
-                                    looping: false,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.only(top: 12),
-                              width: MediaQuery.of(context).size.width / 1.2,
-                              alignment: Alignment.topCenter,
-                              child: Padding(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(projectDados[index].projectName,textAlign: TextAlign.justify,
-                                      style: TextStyle(fontSize: 18, color: AppColors().kSecondColor, fontWeight: FontWeight.bold),),
-                                    const Divider(color: Colors.transparent,),
-                                    Text(projectDados[index].projectDescription,
-                                      textAlign: TextAlign.justify,
-                                      style: TextStyle(fontSize: 14, color: AppColors().kSecondColor),
-                                    ),
-                                    const Divider(color: Colors.transparent,),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                  }, separatorBuilder: (BuildContext context, int index) {
-                  return const Divider();
-                },),
+              const Divider(
+                color: Colors.transparent,
               ),
+              ListView.separated(
+                shrinkWrap: true,
+                itemCount: projectDados.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return
+                    Container(
+                      color: AppColors().brightBackground,
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Card(
+                              child: SizedBox(
+                                height: 300,
+                                width: 300,
+                                child: ChewieListItem(
+                                  videoPlayerController: VideoPlayerController.asset(
+                                    projectDados[index].projectVideoUrl,
+                                  ),
+                                  looping: false,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.only(top: 12),
+                            width: MediaQuery.of(context).size.width / 1.2,
+                            alignment: Alignment.topCenter,
+                            child: Padding(
+                              padding: const EdgeInsets.all(12),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Text(projectDados[index].projectName,textAlign: TextAlign.justify,
+                                    style: TextStyle(fontSize: 18, color: AppColors().kSecondColor, fontWeight: FontWeight.bold),),
+                                  const Divider(color: Colors.transparent,),
+                                  Text(projectDados[index].projectDescription,
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(fontSize: 14, color: AppColors().kSecondColor),
+                                  ),
+                                  const Divider(color: Colors.transparent,),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                }, separatorBuilder: (BuildContext context, int index) {
+                return const Divider();
+              },),
             ],
           ),
         ),

@@ -35,8 +35,7 @@ class _RepositoriesState extends State<Repositories> {
 
     return Container(
       color: AppColors().darkBackground,
-      padding: const EdgeInsets.only(top: 12),
-      height: MediaQuery.of(context).size.height * .56,
+      padding: const EdgeInsets.all(18),
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -51,7 +50,9 @@ class _RepositoriesState extends State<Repositories> {
                   '../Projetos/Estudos',
                   style: TextStyle(fontSize: 18, color: AppColors().kSecondColor, fontStyle: FontStyle.italic),
                 ),
-                const Divider(),
+                const Divider(
+                  color: Colors.transparent,
+                ),
                 Container(
                   padding: const EdgeInsets.only(top: 12),
                   child: CarouselSlider(

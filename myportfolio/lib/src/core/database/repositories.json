@@ -1,58 +1,34 @@
 {
   "repos": [
     {
+      "repoName": "Landing Page - Portfólio",
+      "repoDescription": "Repositório deste portfólio feito com Flutter Web",
+      "repoImage": "lib/images/portfolio.png",
+      "repoUrl": "https://github.com/JohnKeven/meuportfolio"
+    },
+    {
       "repoName": "API com SpringBoot 3",
-      "repoDescription": "API RESTful seguindo o modelo de maturidade de Richardson",
+      "repoDescription": "API RESTful utilizando PostgreeSQL e seguindo o modelo de maturidade de Richardson",
       "repoImage": "lib/images/api.png",
       "repoUrl": "https://github.com/JohnKeven/SpringBoot-3"
     },
     {
-      "repoName": "App Youtube Clone",
-      "repoDescription": "Consumindo API da GCP e trabalhando com vídeos via JSON",
-      "repoImage": "lib/images/youtube.png",
-      "repoUrl": "https://github.com/JohnKeven/YoutubeApp"
-    },
-    {
-      "repoName": "App Nubank Clone",
-      "repoDescription": "App clone do Nubank",
-      "repoImage": "lib/images/nubank.png",
-      "repoUrl": "https://github.com/JohnKeven/NubankApp"
-    },
-    {
-      "repoName": "API Carro",
-      "repoDescription": "API Node.js utilizando Docker e MySQL",
+      "repoName": "API com Node",
+      "repoDescription": "API Node.js simples utilizando Docker e MySQL",
       "repoImage": "lib/images/api.png",
       "repoUrl": "https://github.com/JohnKeven/apiCarro"
     },
     {
-      "repoName": "App Preço Bitcoin",
-      "repoDescription": "Consumindo API no Flutter",
-      "repoImage": "lib/images/precobitcoin.png",
-      "repoUrl": "https://github.com/JohnKeven/PrecoBitcoinApp"
+      "repoName": "Estrutura de Dados",
+      "repoDescription": "Estrutura de Dados utilizando Java",
+      "repoImage": "lib/images/java.jpeg",
+      "repoUrl": "https://github.com/JohnKeven/Estrutura-de-Dados"
     },
     {
-      "repoName": "App ATM Consultoria",
-      "repoDescription": "Entendendo componentes de navegação entre telas",
-      "repoImage": "lib/images/atmconsultoria.png",
-      "repoUrl": "https://github.com/JohnKeven/AtmConsultoriaApp"
-    },
-    {
-      "repoName": "App Combustível",
-      "repoDescription": "Entendendo componentes de entrada e saída de dados",
-      "repoImage": "lib/images/combustivelapp.png",
-      "repoUrl": "https://github.com/JohnKeven/CombustivelApp"
-    },
-    {
-      "repoName": "App JoKenPo",
-      "repoDescription": "Usando GestureDetector e Assets no Flutter",
-      "repoImage": "lib/images/jokenpo.png",
-      "repoUrl": "https://github.com/JohnKeven/JokenPoApp"
-    },
-    {
-      "repoName": "App Frases do Dia",
-      "repoDescription": "Estudo de recursos básicos do Flutter",
-      "repoImage": "lib/images/frasesdodia.png",
-      "repoUrl": "https://github.com/JohnKeven/FrasesApp"
+      "repoName": "App Academia",
+      "repoDescription": "Projeto de Estudo Android com Java",
+      "repoImage": "lib/images/android.png",
+      "repoUrl": "https://github.com/JohnKeven/Projeto-Academia-Mobile"
     }
   ]
 }
