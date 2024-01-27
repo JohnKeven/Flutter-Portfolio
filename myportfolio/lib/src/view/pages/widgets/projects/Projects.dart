@@ -111,7 +111,7 @@ Widget buildProjectsDesktopTablet(context, projectDados){
                       ),
                     );
                 }, separatorBuilder: (BuildContext context, int index) {
-                return const Divider();
+                return const Divider( color: Colors.transparent,);
               },),
             ],
           ),
